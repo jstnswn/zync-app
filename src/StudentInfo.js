@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Tags from './Tags';
 import { getGradeAverage } from './utils'
 
-export default function StudentInfo({ student }) {
+export default function StudentInfo({ student, setStudents }) {
     const [showGrades, setShowGrades] = useState(false);
 
     const expandGrades = (e) => {
@@ -51,7 +51,7 @@ export default function StudentInfo({ student }) {
                         </div>
                     )}
 
-                    <Tags />
+                    <Tags student={student} setStudents={setStudents}/>
 
                     {button}
                 </div>

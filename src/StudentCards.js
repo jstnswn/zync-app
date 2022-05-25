@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { getGradeAverage } from './utils';
+import { formatData } from './utils';
 import './studentCards.css';
-import Search from './Search';
 import StudentInfo from './StudentInfo';
+import Search from './Search';
 
 export default function StudentCards() {
     const [students, setStudents] = useState([]);
@@ -12,8 +12,9 @@ export default function StudentCards() {
         (async () => {
             const res = await fetch('https://api.hatchways.io/assessment/students');
             const data = await res.json();
-            setStudents(data.students);
-            setDisplayStudents(data.students);
+            const formatted = formatData(data.students);
+            setStudents(formatted);
+            setDisplayStudents(formatted);
         })();
     }, [])
 
@@ -22,7 +23,7 @@ export default function StudentCards() {
         <div id='main-wrapper'>
             <Search students={students} setDisplayStudents={setDisplayStudents}/>
             <ul id='cards-wrapper'>
-                {displayStudents.map(student => <StudentInfo student={student}/>)}
+                {displayStudents.map(student => <StudentInfo student={student} setStudents={setStudents}/>)}
             </ul>
         </div>
     )

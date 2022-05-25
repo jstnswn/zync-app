@@ -1,22 +1,29 @@
 import React, { useState } from 'react'
 
-export default function Tags() {
+export default function Tags({student, setStudents}) {
     const [tagInput, setTagInput] = useState('');
-    const [tags, setTags] = useState([]);
+
+    const setTag = (tag) => {
+        setStudents(prev => {
+            prev[student.id - 1].tags.push(tag);
+            return prev;
+        })
+    }
 
     const submitTag = (e) => {
         e.preventDefault();
-        setTags(prev => [...prev, tagInput]);
-        console.log(tags);
+        setTag(tagInput);
         setTagInput('');
     }
 
 
+
+
     return (
         <div className='tags-wrapper'>
-            {tags.length > 0 && (
+            {student.tags.length > 0 && (
                 <ul className='tag-collection'>
-                    {tags.map((tag, idx) => <li className='tag' key={idx}>{tag}</li>)}
+                    {student.tags.map((tag, idx) => <li className='tag' key={idx}>{tag}</li>)}
                 </ul>
             )}
 

@@ -5,3 +5,7 @@ export function getGradeAverage(grades) {
     }
     return sum / grades.length;
 }
+
+export function formatData(data) {
+    return data.map(datum => ({...datum, tags: []}))
+}
