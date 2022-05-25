@@ -1,0 +1,107 @@
+#cards-wrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.student-card {
+    /* border-bottom: 1.5px solid var(--border-gray);
+    display: flex;
+    padding: 10px; */
+    /* height: 25vh; */
+    width: 100%;
+    /* max-height: 215px; */
+    position: relative;
+    border-bottom: 1.5px solid var(--border-gray);
+}
+
+.main-card-area {
+    display: flex;
+    padding: 10px;
+}
+
+.student-card p {
+    padding: 0;
+    margin: 0;
+}
+
+.student-card .name {
+    font-weight: 700;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+.student-card .info {
+    color: var(--text-gray);
+    font-size: 1.1em;
+    padding-left: 15px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    /* height: 83%; */
+    width: 100%;
+}
+
+.student-card .info p {
+    padding: 2.5px;
+}
+
+.student-card .pic-container {
+    /* display: flex; */
+    margin-right: 19px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    border: var(--border-gray) 1px solid;
+    overflow: hidden;
+}
+
+.student-card img {
+    object-fit: cover;
+    height: 17vh;
+    width:  17vh;
+    max-height: 115px;
+    max-width: 115px;
+}
+
+.student-card .top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.all-grades {
+    display: block;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+    padding-left: 15px;
+}
+
+.fa-plus, .fa-minus {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(186, 186, 186);
+    cursor: pointer;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hidden-footer {
+    display: flex;
+}
+
+.empty-div {
+    height: 17vh;
+    width: 17vh;
+    max-height: 115px;
+    max-width: 115px;
+    margin-right: 35px;
+}
+
+.all-grades li {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
