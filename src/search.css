@@ -30,5 +30,5 @@
 }
 
 #search-input::placeholder {
-    color: rgb(163, 162, 162);
+    color: var(--input-gray);
 }

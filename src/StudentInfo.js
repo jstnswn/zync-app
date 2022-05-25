@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Tags from './Tags';
 import { getGradeAverage } from './utils'
 
 export default function StudentInfo({ student }) {
@@ -23,11 +24,10 @@ export default function StudentInfo({ student }) {
     return (
         <>
             <li className='student-card'>
+                <div className='pic-container'>
+                    <img src={student.pic} alt='student-pic'></img>
+                </div>
                 <div className='main-card-area'>
-                    <div className='pic-container'>
-                        <img src={student.pic} alt='student-pic'></img>
-
-                    </div>
                     <div>
                         <p className='name'>{student.firstName} {student.lastName}</p>
                         <div className='info'>
@@ -38,23 +38,24 @@ export default function StudentInfo({ student }) {
                         </div>
 
                     </div>
+                    {showGrades && (
+                        <div className='hidden-footer'>
+                            <ul className='all-grades'>
+                                {student.grades.map((grade, idx) => (
+                                    <li key={idx}>
+                                        <p>Text {idx + 1}</p>
+                                        <p>{grade}%</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    <Tags />
 
                     {button}
-
                 </div>
-                {showGrades && (
-                    <div className='hidden-footer'>
-                        <div className='empty-div'></div>
-                        <ul className='all-grades'>
-                            {student.grades.map((grade, idx) => (
-                                <li key={idx}>
-                                    <p>Text {idx + 1}</p>
-                                    <p>{grade}%</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+
             </li>
         </>
     )
