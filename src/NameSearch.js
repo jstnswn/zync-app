@@ -1,23 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './search.css'
 
-export default function NameSearch({ students, setDisplayStudents }) {
-    const [query, setQuery] = useState('');
-
-    useEffect(() => {
-        if (query === '') {
-            setDisplayStudents(students);
-            return;
-        }
-
-        setDisplayStudents(students.filter(({firstName, lastName}) => {
-            return query.split(' ').filter(word => word !== '').every(word => {
-                return (word && lastName.toLowerCase().includes(word.toLocaleLowerCase()))
-                    || (word && firstName.toLowerCase().includes(word.toLocaleLowerCase()));
-            })
-
-        }))
-    }, [query, students, setDisplayStudents])
+export default function NameSearch({ query, setQuery }) {
 
     return (
         <div className='search' id='name-search'>
