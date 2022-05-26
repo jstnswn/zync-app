@@ -39,9 +39,9 @@ export default function Search({ students, setDisplayStudents }) {
     }, [nameQuery, students, setDisplayStudents, tagQuery])
 
     return (
-        <>
+        <div id='search-area'>
             <NameSearch query={nameQuery} setQuery={setNameQuery}/>
             <TagSearch query={tagQuery} setQuery={setTagQuery}/>
-        </>
+        </div>
     )
 }

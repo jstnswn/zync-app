@@ -10,7 +10,6 @@ export default function NameSearch({ query, setQuery }) {
                 type='text'
                 value={query}
                 onChange={e => setQuery(e.target.value)}
-                onFocus={() => setQuery('')}
                 placeholder='Search by name'
             />
         </div>

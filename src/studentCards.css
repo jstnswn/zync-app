@@ -1,7 +1,7 @@
-#cards-wrapper {
+/* #cards-wrapper {
     margin-top: 5.6em;
     width: 100%;
-}
+} */
 
 .student-card {
     display: flex;
@@ -45,24 +45,18 @@
 .student-card .pic-container {
     /* display: flex; */
     margin-right: 19px;
-    /* margin-top: auto; */
-    /* margin-bottom: auto; */
+    margin-top: 15px;
     border-radius: 50%;
     border: var(--border-gray) 1px solid;
     overflow: hidden;
-    height: 17vh;
-    width:  17vh;
-    max-height: 115px;
-    max-width: 115px;
-    margin-top: 15px;
+    height: 115px;
+    width: 115px;
 }
 
 .student-card img {
     object-fit: cover;
-    height: 17vh;
-    width:  17vh;
-    max-height: 115px;
-    max-width: 115px;
+    height: 115px;
+    width: 115px;
 }
 
 /* .student-card .top {
@@ -110,7 +104,7 @@
     border: none;
     outline: none;
     width: 50%;
-    border-bottom: 2px solid var(--border-gray);
+    border-bottom: 1.5px solid var(--border-gray);
     color: var(--input-gray);
     /* transition: 3s; */
 }
@@ -120,7 +114,7 @@
 }
 
 .tag-input:focus {
-    border-bottom: 2px solid rgb(166, 166, 166);
+    border-bottom: 1.5px solid var(--border-focus);
 }
 
 .tag-collection {
