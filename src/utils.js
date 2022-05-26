@@ -6,6 +6,7 @@ export function getGradeAverage(grades) {
     return sum / grades.length;
 }
 
+// Adds tags property
 export function formatData(data) {
     return data.map(datum => ({...datum, tags: []}))
 }

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import Tags from './Tags';
-import { getGradeAverage } from './utils'
+import Tags from '../Tags';
+import { getGradeAverage } from '../utils';
+import './studentCards.css';
 
-export default function StudentInfo({ student, setStudents }) {
+export default function StudentCard({ student, setStudents }) {
     const [showGrades, setShowGrades] = useState(false);
 
     const expandGrades = (e) => {

@@ -34,18 +34,15 @@ li {
   position: relative;
   background-color: white;
   border-radius: 5px;
-  /* border: red 1px solid; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 #cards-wrapper {
   border-radius: 5px;
   overflow-y: scroll;
-  /* margin-top: 5.6em; */
   margin: 0;
   width: 100%;
   height: calc(100% - 5.6em);
-  /* border: blue 1px solid; */
 }
 
 #cards-wrapper::-webkit-scrollbar {

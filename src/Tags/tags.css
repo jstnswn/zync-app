@@ -1,0 +1,35 @@
+.tags-wrapper {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+.tag-input {
+    margin: 5px;
+    border: none;
+    outline: none;
+    width: 50%;
+    border-bottom: 1.5px solid var(--border-gray);
+    color: var(--input-gray);
+}
+
+.tag-input::placeholder {
+    color: var(--input-gray);
+}
+
+.tag-input:focus {
+    border-bottom: 1.5px solid var(--border-focus);
+}
+
+.tag-collection {
+    display: flex;
+    padding: 0;
+}
+
+.tag {
+    background-color: rgb(224, 223, 223);
+    border-radius: 2px;
+    padding: 5px;
+    margin: 2px;
+    margin-bottom: 5px;
+    font-size: .8em;
+}

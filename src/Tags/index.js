@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './tags.css';
 
 export default function Tags({student, setStudents}) {
     const [tagInput, setTagInput] = useState('');
@@ -15,9 +16,6 @@ export default function Tags({student, setStudents}) {
         setTag(tagInput);
         setTagInput('');
     }
-
-
-
 
     return (
         <div className='tags-wrapper'>

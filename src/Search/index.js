@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import NameSearch from './NameSearch'
-import TagSearch from './TagSearch'
+import React, { useEffect, useState } from 'react';
+import NameSearch from './NameSearch';
+import TagSearch from './TagSearch';
 
 export default function Search({ students, setDisplayStudents }) {
     const [nameQuery, setNameQuery] = useState('');
@@ -17,20 +17,23 @@ export default function Search({ students, setDisplayStudents }) {
     };
 
     useEffect(() => {
+        // Reset display
         if (tagQuery === '' && nameQuery === '') {
             setDisplayStudents(students);
             return;
         }
-
+        // Name only search
         if (nameQuery && !tagQuery) {
             setDisplayStudents(students.filter(({ firstName, lastName }) => (
                 checkNameQuery(nameQuery, firstName, lastName))));
 
+        // Tag only search
         } else if (!nameQuery && tagQuery) {
             setDisplayStudents(students.filter(({ tags }) => (
                 checkTagQuery(tagQuery, tags)
             )))
 
+        // Combined search
         } else {
             setDisplayStudents(students.filter(({ firstName, lastName, tags}) => (
                 checkNameQuery(nameQuery, firstName, lastName) && checkTagQuery(tagQuery, tags)
