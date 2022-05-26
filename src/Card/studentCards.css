@@ -4,12 +4,14 @@
     width: 100%;
     position: relative;
     border-bottom: 1.5px solid var(--border-gray);
+    min-width: 320px;
 }
 
 .main-card-area {
     display: flex;
     flex-direction: column;
     padding: 15px;
+    padding-bottom: 5px;
 }
 
 .student-card p {
@@ -19,18 +21,17 @@
 
 .student-card .name {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.9em;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .student-card .info {
     color: var(--text-gray);
-    font-size: 1.1em;
+    font-size: 1em;
     padding-left: 15px;
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
-    /* height: 83%; */
     width: 100%;
 }
 
@@ -39,9 +40,8 @@
 }
 
 .student-card .pic-container {
-    /* display: flex; */
     margin-right: 19px;
-    margin-top: 15px;
+    margin-top: 25px;
     border-radius: 50%;
     border: var(--border-gray) 1px solid;
     overflow: hidden;
@@ -82,4 +82,21 @@
     width: 100px;
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 650px) {
+    .pic-container {
+        display: none;
+    }
+
+    .student-card .name {
+        font-size: 1.5em;
+    }
+
+    .student-card .info,
+    .all-grades li {
+        font-size: .8em;
+    }
+
+
 }

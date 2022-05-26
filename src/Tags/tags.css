@@ -10,6 +10,7 @@
     width: 50%;
     border-bottom: 1.5px solid var(--border-gray);
     color: var(--input-gray);
+    font-family: 'Raleway', sans-serif;
 }
 
 .tag-input::placeholder {

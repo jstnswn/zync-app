@@ -17,6 +17,7 @@
     color: rgb(163, 162, 162);
     outline: none;
     border-bottom: 1.5px var(--border-gray) solid;
+    font-family: 'Raleway', sans-serif;
 }
 
 .search-input:focus {
